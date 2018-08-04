@@ -77,18 +77,14 @@ WSGI_APPLICATION = 'demoproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'OwinOathDbContext',
-        'ENGINE': 'sqlserver_ado',
-        'HOST': 'localhost',
-        'USER': 'sa',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'testing',
+        'USER': 'everest',
         'PASSWORD': 'release',
-        'OPTIONS': {
-            'provider': 'SQLOLEDB',
-            'use_legacy_date_fields': 'True'
-        }
+        'HOST': '192.168.50.64',
+        'PORT': '5432',
     }
 }
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
