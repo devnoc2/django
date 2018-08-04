@@ -76,11 +76,17 @@ WSGI_APPLICATION = 'demoproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'OwinOathDbContext',
+        'ENGINE': 'sqlserver_ado',
+        'HOST': 'localhost',
+        'USER': 'sa',
+        'PASSWORD': 'release',
+        'OPTIONS': {
+            'provider': 'SQLOLEDB',
+            'use_legacy_date_fields': 'True'
+        }
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
